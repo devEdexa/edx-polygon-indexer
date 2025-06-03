@@ -1,8 +1,8 @@
-# SubQuery - Example Project for Polygon
+# SubQuery - EDX Token for Polygon
 
 [SubQuery](https://subquery.network) is a fast, flexible, and reliable open-source data indexer that provides you with custom APIs for your web3 project across all of our supported networks. To learn about how to get started with SubQuery, [visit our docs](https://academy.subquery.network).
 
-**This SubQuery project indexes all transfers and approval events for the [wrapped Ether token](https://polygonscan.com/address/0x7ceb23fd6bc0add59e62ac25578270cff1b9f619) (`0x7ceb23fd6bc0add59e62ac25578270cff1b9f619`) on Polgon Network**
+**This SubQuery project indexes all transfers and approval events for the [EDX token](https://polygonscan.com/address/0xC114678C6e4654d041B2006C90f08478b444c4E2) (`0xC114678C6e4654d041B2006C90f08478b444c4E2`) on Polgon Network**
 
 ## Start
 
