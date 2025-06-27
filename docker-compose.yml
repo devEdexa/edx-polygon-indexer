@@ -26,7 +26,7 @@ services:
       postgres:
         condition: service_healthy
     restart: unless-stopped
-    env_file:: ".env"
+    env_file: ".env"
     command:
       - ${SUB_COMMAND:-}
       - -f=/app/project.yaml
@@ -52,7 +52,7 @@ services:
       "subquery-node":
         condition: service_healthy
     restart: always
-    env_file:: ".env"
+    env_file: ".env"
     command:
       - --name=app
       - --playground
