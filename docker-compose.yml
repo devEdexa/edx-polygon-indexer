@@ -18,9 +18,12 @@ services:
       retries: 5
 
   subquery-node:
-    image: subquerynetwork/subql-node-ethereum:latest
+    build:
+      context: .                     # Assuming Dockerfile is in project root
+      dockerfile: Dockerfile        # Adjust if Dockerfile is named differently
+    container_name: subquery_node
     depends_on:
-      "postgres":
+      postgres:
         condition: service_healthy
     restart: unless-stopped
     environment:
@@ -29,11 +32,9 @@ services:
       DB_DATABASE: postgres
       DB_HOST: postgres
       DB_PORT: 5432
-    volumes:
-      - ./:/app
     command:
-      - ${SUB_COMMAND:-} # set SUB_COMMAND env variable to "test" to run tests
-      - -f=/app
+      - ${SUB_COMMAND:-}
+      - -f=/app/project.yaml
       - --db-schema=app
       - --workers=4
       - --batch-size=30
