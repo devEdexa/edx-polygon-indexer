@@ -26,12 +26,7 @@ services:
       postgres:
         condition: service_healthy
     restart: unless-stopped
-    environment:
-      DB_USER: postgres
-      DB_PASS: postgres
-      DB_DATABASE: postgres
-      DB_HOST: postgres
-      DB_PORT: 5432
+    env_file:: ".env"
     command:
       - ${SUB_COMMAND:-}
       - -f=/app/project.yaml
@@ -57,12 +52,7 @@ services:
       "subquery-node":
         condition: service_healthy
     restart: always
-    environment:
-      DB_USER: postgres
-      DB_PASS: postgres
-      DB_DATABASE: postgres
-      DB_HOST: postgres
-      DB_PORT: 5432
+    env_file:: ".env"
     command:
       - --name=app
       - --playground
