@@ -55,12 +55,12 @@ const project: EthereumProject = {
   dataSources: [
     {
       kind: EthereumDatasourceKind.Runtime,
-      startBlock: 42882705, // This is the block that the contract was deployed on
+      startBlock: 23078937, // This is the block that the contract was deployed on
       options: {
         // Must be a key of assets
         abi: "erc20",
         // This is the contract address for wrapped ether https://polygonscan.com/address/0x7ceb23fd6bc0add59e62ac25578270cff1b9f619
-        address: "0xC114678C6e4654d041B2006C90f08478b444c4E2",
+        address: "0xa6Cb7A9e328bCD6626725fe18f93C35AD3F382A8",
       },
       assets: new Map([["erc20", { file: "./abis/erc20.abi.json" }]]),
       mapping: {
